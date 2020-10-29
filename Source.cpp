@@ -4,18 +4,18 @@
 #include <math.h>
 #include <iostream>
 
-int l(int *h)
+int l(int h)
 {
-	if (*h % 5 != 0)
-		*h = *h - 50;
-	return *h;
+	if (h % 5 != 0)
+		h = h - 50;
+	return h;
 }
 int sum(int x, int y)
 {
 	int g = x + y;
 	if (g % 2 != 0)
 		g = ((g + 1) / 2);
-	l(&g);
+	g = l(g);
 	return g;
 }
 int main(void)
